@@ -1,9 +1,9 @@
 name: Hello World
-on: workflow_dispatch
+on: workflow_call
 jobs:
   hello:
-   runs-on: ubuntu-latest
-   steps:
-    - name: Hello setup
-      run: echo "Hello to GHA"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello step
+        run: "echo "welcome to GHA"
   
