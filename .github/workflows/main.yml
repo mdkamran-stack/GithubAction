@@ -2,16 +2,15 @@ name: My CICD pipeline in GHA
 
 on:
   push:
-  brnaches: main
+   branches: main
 
 jobs:
   build:
    runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v4
 
-steps:
-  - uses: actions/checkout@v4
-
-  - name: My first step
-    run:
-     echo "This is Devops kam"
-     uname -a
+    - name: My first step
+      run:
+        echo "This is Devops kam"
+         uname -a
