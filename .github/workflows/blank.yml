@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   hello:
    runs-on: ubuntu-latest
-  steps:
+   steps:
     - name: Hello setup
     run: echo "Hello to GHA"
   
