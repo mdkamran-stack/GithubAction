@@ -1,12 +1,14 @@
-name: Hello world
+name: github action demo
 
 on: push
 
 jobs:
-  build:
+  action:demo
     runs-on: ubuntu-latest
     steps:
-      - name: Build step
-        run: echo "Hello, ${{ secrets.DOCKER_PASSWORD }}"
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: Prinet index.html file
+        run: cat index.html
 
 
