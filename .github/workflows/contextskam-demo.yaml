@@ -1,3 +1,4 @@
+
 name: Context variables demo
 
 on: push
@@ -10,5 +11,7 @@ jobs:
         run: |
           echo "This workflow is triggered by ${{ github.actor }}"
           echo "The repository name is ${{ github.repository }}"
+
       - name: Print all variables under github
-        run: "{{ toJson(github) }}"
+        run: echo '${{ toJSON(github) }}'
+
