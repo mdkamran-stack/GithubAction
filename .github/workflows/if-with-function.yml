@@ -42,7 +42,7 @@ jobs:
 
   failure_notify:
     needs: [quality_checks, dev_deploy, prod_deploy]
-    if: always() && failure()
+    if: always() && needs.quality_checks.result == 'failure'
     runs-on: ubuntu-latest
     steps:
       - name: Failure notification
