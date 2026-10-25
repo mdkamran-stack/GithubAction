@@ -15,6 +15,10 @@ jobs:
     steps:
       - name: Perform code quality
         run: echo "Perform quality_checks on the code"
+<<<<<<< HEAD
+=======
+        exit 1
+>>>>>>> aa6c4e8 (if -with-example2)
 
   dev_deploy:
     if: github.ref_name == 'develop' && github.event_name == 'push'
@@ -44,4 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Failure notification
+<<<<<<< HEAD
         run: echo "Failure notification sent to the team"
+=======
+        run: echo "Failure notification sent to the team"
+>>>>>>> aa6c4e8 (if -with-example2)
